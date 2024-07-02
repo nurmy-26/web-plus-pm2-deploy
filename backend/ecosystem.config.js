@@ -19,8 +19,8 @@ module.exports = {
       path: DEPLOY_PATH,
       // 1) pre-deploy-local - указанная справа команда запустится ЛОКАЛЬНО (в папке с проектом на компе):
       // копируем файл env на сервер по указанному адресу с помощью bash-скрипта
-      'pre-deploy': `scp ./*.env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
-      // 'pre-deploy-local': `bash scripts/deployEnv.sh ${DEPLOY_USER}@${DEPLOY_HOST} ${DEPLOY_PATH}`,
+      // 'pre-deploy': `scp ./*.env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
+      'pre-deploy-local': `bash scripts/deployEnv.sh ${DEPLOY_USER}@${DEPLOY_HOST} ${DEPLOY_PATH}`,
 
       // 2) деплой - заливаем изменения на сервер в папку source
       // 3) post-deploy - после деплоя, уже на сервере устанавливаем зависимости, делаем сборку и тд
