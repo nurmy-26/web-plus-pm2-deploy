@@ -15,7 +15,7 @@ module.exports = {
       repo: DEPLOY_REPOSITORY,
       path: DEPLOY_PATH,
       // очищаем иначе пишет что такая папка уже есть (была создана бекендом)
-      'pre-deploy': 'rm -rf /home/nurmy/mesto/source/*',
+      'pre-setup': 'rm -rf /home/nurmy/mesto/source/*',
       // вариант проще - билдить локально и отправлять на сервер уже готовый билд
       'post-deploy': 'cd frontend && npm ci && npm run build'
     },
